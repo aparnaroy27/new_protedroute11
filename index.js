@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
             Mypassword: Password
         };
 
-        fetch("http://localhost:3005/contact",{
+        fetch(`${BASE_URL}/contact`,{
             method: "POST",
             headers:{
                 "content-type": "application/json"
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             Mypassword: Password
         };
 
-        fetch("http://localhost:3005/contact1", {
+        fetch(`${BASE_URL}/contact1`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
     async function fetchData() {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:3005/protected', {
+            const response = await fetch(`${BASE_URL}/protected`, {
                 method: 'GET',
                 headers: {
                     'Authorization': token
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 async function fetchData() {
     try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:3005/new_protected', {
+        const response = await fetch(`${BASE_URL}/new_protected`, {
             method: 'GET',
             headers: {
                 'Authorization': token
